@@ -5,7 +5,7 @@ const questionList = [
   "شوفتي زميلتك جني بتستغل ريم بانها تاخد فلوسها بغير رضاها",
 ];
 let score = 0;
-let currentQuestionNumberNumber = 0;
+let currentQuestionNumber = 0;
 
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
