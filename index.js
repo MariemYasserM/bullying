@@ -15,27 +15,22 @@ const scoreText = document.getElementById("scoreText");
 const questionText = document.getElementById("question");
 questionText.innerText = questionList[0];
 
-
 answer1.addEventListener("click", (e) => {
-  e.stopPropagation();
   e.preventDefault();
   answer(1);
 });
 
 answer2.addEventListener("click", (e) => {
-  e.stopPropagation();
   e.preventDefault();
   answer(2);
 });
 
 answer3.addEventListener("click", (e) => {
-  e.stopPropagation();
   e.preventDefault();
   answer(3);
 });
 
 answer4.addEventListener("click", (e) => {
-  e.stopPropagation();
   e.preventDefault();
   answer(4);
 });
@@ -49,12 +44,12 @@ function answer(answer) {
       if (currentQuestionNumber === 4) {
         currentQuestionNumber = 0;
         score = 0;
-        answer1.innerText = "تنمر لفظي"
+        answer1.innerText = "تنمر لفظي";
         answer2.style.display = "block";
         answer3.style.display = "block";
         answer4.style.display = "block";
-        scoreText.style.display = "none"
-        questionText.innerText = questionList[currentQuestionNumber]
+        scoreText.style.display = "none";
+        questionText.innerText = questionList[currentQuestionNumber];
         return;
       }
       break;
@@ -104,26 +99,28 @@ let infoCount = 0;
 
 function handleInfoPieceClick() {
   // Get the value of the "data-answer" attribute
-  const dataAnswer = this.getAttribute('data-answer');
+  const dataAnswer = this.getAttribute("data-answer");
 
-  if (dataAnswer === 'yes') {
-    const text = `متخافش، عادي تشارك ${this.innerText} مع صحابك`
+  if (dataAnswer === "yes") {
+    const text = `متخافش، عادي تشارك ${this.innerText} مع صحابك`;
     alert(text);
     this.removeEventListener("click", handleInfoPieceClick);
     this.style.backgroundColor = "gray";
   } else {
     // If data-answer is "no", hide the element
     infoCount--;
-    infoCountText.innerText = infoCount ? "لسه فاضل " + infoCount : "كده تمااااام، احنا في الامان"
-    this.style.display = 'none';
+    infoCountText.innerText = infoCount
+      ? "لسه فاضل " + infoCount
+      : "كده تمااااام، احنا في الامان";
+    this.style.display = "none";
   }
 }
 
 // Get all elements with class "info-piece"
-const infoPieces = document.querySelectorAll('.info-piece');
+const infoPieces = document.querySelectorAll(".info-piece");
 
 // Iterate through the elements and add click event listeners
 infoPieces.forEach((element) => {
-  element.addEventListener('click', handleInfoPieceClick);
-  if (element.getAttribute('data-answer') === "no") infoCount++;
+  element.addEventListener("click", handleInfoPieceClick);
+  if (element.getAttribute("data-answer") === "no") infoCount++;
 });
