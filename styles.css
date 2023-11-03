@@ -207,7 +207,7 @@ section ul {
 
 
 
-.quiz button {
+.quiz >div>div {
     color: white;
     font-size: larger;
     width: 160px;
@@ -219,7 +219,7 @@ section ul {
     cursor: pointer;
 }
 
-.quiz button:hover {
+.quiz >div>div:hover {
     scale: 1.05;
 }
 
