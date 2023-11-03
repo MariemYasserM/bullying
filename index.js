@@ -16,22 +16,18 @@ const questionText = document.getElementById("question");
 questionText.innerText = questionList[0];
 
 answer1.addEventListener("click", (e) => {
-  e.preventDefault();
   answer(1);
 });
 
 answer2.addEventListener("click", (e) => {
-  e.preventDefault();
   answer(2);
 });
 
 answer3.addEventListener("click", (e) => {
-  e.preventDefault();
   answer(3);
 });
 
 answer4.addEventListener("click", (e) => {
-  e.preventDefault();
   answer(4);
 });
 
