@@ -89,7 +89,7 @@ function answer(answer) {
         "أحسنت! كده انت جاهز، كمل عشان تعرف ازاي تحاربه بقى.";
     else if (score === 3)
       questionText.innerText = "شاطر! بس تقدر تبقى احسن من كده، حاول تاني.";
-    else questionText.innerText = "مثير للشفقة، راجع معلوماتك.";
+    else questionText.innerText = "راجع معلوماتك، عشان نحارب لازم نبقى جاهزين.";
 
     answer1.innerText = "حاول مرة اخرى";
     return;
