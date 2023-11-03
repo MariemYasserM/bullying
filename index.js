@@ -16,25 +16,33 @@ const questionText = document.getElementById("question");
 questionText.innerText = questionList[0];
 
 answer1.addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
   answer(1);
 });
 
 answer2.addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
   answer(2);
 });
 
 answer3.addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
   answer(3);
 });
 
 answer4.addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
   answer(4);
 });
 
 function answer(answer) {
   switch (answer) {
     case 1:
-      if (currentQuestionNumberNumber === 0) {
+      if (currentQuestionNumber === 0) {
         score++;
       }
       if (currentQuestionNumber === 4) {
