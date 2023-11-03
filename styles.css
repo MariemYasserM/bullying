@@ -1,27 +1,36 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
-
+    font-family: 'Cairo', sans-serif;
+    overflow: hidden;
 }
 
-body{
+html {
+    overflow: scroll;
+}
+
+body {
     background-color: white;
     color: #432818;
 }
 
-a{
+a {
     text-decoration: none;
     font-size: 1.2rem;
-    color:white;
+    color: white;
     transition: all 0.3s ease-in-out;
     display: block;
 }
-a:hover{
+
+
+
+a:hover {
     scale: 1.1;
 
 }
-header{
+
+header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,24 +42,40 @@ header{
     margin: 12px auto;
     border-radius: 10px;
 }
-footer{
+
+footer {
     background-color: #3da5d9;
+    color: white;
     height: 74px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-nav ul{
+
+nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    a {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
 }
 
 /* sections styling  */
 
-section{
+section {
     max-width: 1000px;
     margin: 120px auto;
     display: flex;
@@ -58,68 +83,192 @@ section{
     gap: 20px;
 }
 
-body > div{
+body>div {
     position: relative;
 }
 
-body > div:nth-child(even){
+body>div:nth-child(even) {
     background-color: #f1f1f1;
     z-index: -2;
     width: 100%;
     padding: 20px 0;
 }
-section >:not(h2){
+
+section>:not(h2) {
     padding: 0 22px;
 }
 
 
 
-h2{
+h2 {
     font-size: 1.2rem;
     padding: 5px 10px;
     margin-bottom: 30px;
     border-radius: 10px;
-    
+
 }
-#main h2{
+
+@media screen and (max-width: 600px) {
+    h2 {
+        width: max-content;
+        margin: 0 auto;
+        padding: 5px 20px;
+    }
+
+}
+
+#main h2 {
     background-color: #ff6b35;
 }
 
-.blob1{
+.blob1 {
     position: absolute;
     height: 600px;
     width: 600px;
-    right:120px;
+    right: 120px;
     z-index: -1;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.blob2{
+.blob2 {
     position: absolute;
     height: 480px;
     width: 480px;
-    left:300px;
+    left: 300px;
     z-index: -1;
     top: 60%;
     transform: translateY(-50%);
 }
 
+@media screen and (max-width: 600px) {
+    .blob1 {
+        right: 100px;
+    }
+
+    .blob2 {
+        left: 0px;
+        transform: translateX(-50%) translateY(-20%);
+
+        height: 650px;
+        width: 650px;
+    }
+
+}
+
 #top {
     font-size: larger;
 }
-#first h2{
+
+#first h2 {
     background-color: #9fffcb;
 }
-#second h2{
+
+#second h2 {
     background-color: #758bfd;
 }
-#third h2{
+
+#third h2 {
     background-color: #ffc600;
 }
 
-section ul{
+section ul {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+
+/* Quiz */
+
+.quiz {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    border: 2px solid #3da5d9;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 0 8px;
+}
+
+.quiz span {
+    font-size: larger;
+    color: #3da5d9;
+}
+
+.quiz>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+
+
+.quiz button {
+    color: white;
+    font-size: larger;
+    width: 160px;
+    height: 90px;
+    background-color: #3da5d9;
+    outline: none;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.quiz button:hover {
+    scale: 1.05;
+}
+
+@media screen and (max-width: 600px) {
+    .quiz>div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .quiz button {
+        width: 100%;
+        height: 60px;
+        font-size: large;
+    }
+
+}
+
+
+/* info */
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.info>div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+}
+
+.info>div>div {
+    cursor: pointer;
+    background-color: green;
+    border-radius: 14px;
+    color: white;
+    padding: 8px 14px;
+    font-size: larger;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+
+}
+
+.info>div>div:hover {
+    scale: 1.05;
 }
